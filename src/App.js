@@ -37,9 +37,18 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {
+        tweetsArray.map((tweet) => (
+        <Tweet tweet={tweet} />
+      ))
+      }
     </div>
   );
 }
+/* console.log("DESDEE APP", tweet); */
 
 export default App;
+
+/*       <Tweet tweet={ tweetsArray[0] }/>
+      <Tweet tweet={ tweetsArray[1] }/>
+      <Tweet tweet={ tweetsArray[2] }/> */
